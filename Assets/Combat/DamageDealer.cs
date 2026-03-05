@@ -6,7 +6,7 @@ namespace Assets.Combat
     public class DamageDealer : MonoBehaviour
     {
         [SerializeField] int attackStrength;
-        [SerializeField] List<DamageTaker> excludeDamageTaker;
+        [SerializeField] List<DamageTaker> excludedDamageTakers;
 
         readonly HashSet<DamageTaker> damageTakersInRange = new();
 
@@ -27,7 +27,7 @@ namespace Assets.Combat
 
         public void RegisterDamageTaker(DamageTaker damageTaker)
         {
-            if (excludeDamageTaker.Contains(damageTaker)) return;
+            if (excludedDamageTakers.Contains(damageTaker)) return;
 
             damageTakersInRange.Add(damageTaker);
         }

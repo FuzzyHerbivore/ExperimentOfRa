@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace Assets.Combat
 {
+    [RequireComponent(typeof(Rigidbody))]
     [RequireComponent(typeof(Health))]
     public class DamageTaker : MonoBehaviour
     {
